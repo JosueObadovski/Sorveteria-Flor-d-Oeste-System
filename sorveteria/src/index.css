@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Fredoka:wght@400;700&family=Fredoka+One&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,4 +9,14 @@ html, body, #root {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Bungee', system-ui, sans-serif;
+}
+
+.footer-title {
+  font-family: 'Fredoka One', cursive;
+}
+
+.footer-item {
+  font-family: 'Fredoka', sans-serif;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }

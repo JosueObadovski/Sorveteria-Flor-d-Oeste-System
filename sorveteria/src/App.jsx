@@ -10,11 +10,11 @@ export default function App() {
   return (
     <Router>
       <div
-        className="min-h-screen bg-cover bg-no-repeat bg-center"
+        className="min-h-screen flex flex-col bg-cover bg-no-repeat bg-center"
         style={{ backgroundImage: `url(${fundo})` }}
       >
         <Header />
-        <main className="pt-[140px]">
+        <main className="pt-[140px] flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sabores" element={<Sabores />} />
