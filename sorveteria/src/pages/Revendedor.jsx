@@ -1,12 +1,50 @@
+import { useState } from "react"
+import emailjs from "emailjs-com"
 import imagem1 from "../assets/imagens/Imagem-1.png"
 import imagem2 from "../assets/imagens/Imagem-2.png"
 import imagem3 from "../assets/imagens/Imagem-3.png"
 
 export default function Revendedor() {
+  const [formData, setFormData] = useState({
+    nome: "",
+    email: "",
+    telefone: "",
+    cidadeEstado: "",
+  })
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    const templateParams = {
+      ...formData,
+      mensagem:
+        "Me cadastrei no forms do seu site no Vercel. Gostaria de me tornar um revendedor. Entre em contato comigo pelo meu telefone.",
+    }
+
+    emailjs
+      .send(
+        "service_gmail",
+        "template_2y5h8gk",
+        templateParams,
+        "a4Tj4G7h9KVr9dCnw"
+      )
+      .then(() => {
+        alert("Formulário enviado com sucesso!")
+        setFormData({ nome: "", email: "", telefone: "", cidadeEstado: "" })
+      })
+      .catch((error) => {
+        alert("Erro ao enviar. Tente novamente.")
+        console.error("Erro EmailJS:", error)
+      })
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-300 via-fuchsia-400 to-orange-300 pt-[160px] pb-20">
       <div className="max-w-[1320px] mx-auto px-[80px]">
-        {/* Título */}
         <h1 className="text-[96px] text-[#FDF0EC] font-fredoka font-extrabold leading-tight mb-2 text-center">
           Junte-se à Doçura — <br /> Seja um Revendedor
         </h1>
@@ -71,7 +109,6 @@ export default function Revendedor() {
         {/* Formulário de Contato */}
         <div className="flex justify-center items-center mt-24 mb-[185px]">
           <div className="bg-[#FDF0EC] rounded-[12px] shadow-xl px-8 py-12 w-full max-w-[460px] text-center">
-            {/* Ícone Envelope grande */}
             <div className="flex justify-center mb-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -96,39 +133,45 @@ export default function Revendedor() {
               Preencha seus dados e <br /> entraremos em contato rapidinho
             </p>
 
-            <form className="flex flex-col gap-[15px] px-[70px] text-left">
-              {[
-                { label: "Nome:", type: "text", name: "nome" },
-                { label: "E-mail:", type: "email", name: "email" },
-                { label: "Telefone:", type: "text", name: "telefone" },
-                {
-                  label: "Cidade e Estado:",
-                  type: "text",
-                  name: "cidadeEstado",
-                },
-              ].map((field, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center h-[50px] bg-[#F2B9C9] border border-[#890034] rounded-[12px]"
-                >
-                  <label
-                    htmlFor={field.name}
-                    className="text-[#890034] font-fredoka text-[15px] pl-[15px] py-[15px] w-[130px]"
-                  >
-                    {field.label}
-                  </label>
-                  <input
-                    type={field.type}
-                    id={field.name}
-                    name={field.name}
-                    className="flex-1 h-full bg-transparent outline-none border-none text-[#890034] text-[15px] font-semibold pr-4"
-                  />
-                </div>
-              ))}
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-[15px] px-[70px] text-left"
+            >
+              {["nome", "email", "telefone", "cidadeEstado"].map(
+                (name, idx) => {
+                  const labels = {
+                    nome: "Nome:",
+                    email: "E-mail:",
+                    telefone: "Telefone:",
+                    cidadeEstado: "Cidade e Estado:",
+                  }
+                  return (
+                    <div
+                      key={idx}
+                      className="flex items-center h-[50px] bg-[#F2B9C9] border border-[#890034] rounded-[12px]"
+                    >
+                      <label
+                        htmlFor={name}
+                        className="text-[#890034] font-fredoka text-[15px] pl-[15px] py-[15px] w-[130px]"
+                      >
+                        {labels[name]}
+                      </label>
+                      <input
+                        type="text"
+                        id={name}
+                        name={name}
+                        value={formData[name]}
+                        onChange={handleChange}
+                        className="flex-1 h-full bg-transparent outline-none border-none text-[#890034] text-[15px] font-semibold pr-4"
+                      />
+                    </div>
+                  )
+                }
+              )}
 
               <button
                 type="submit"
-                className="bg-[#F25E9C] text-[#FFFFFF] text-[20px] font-[Fredoka_One] font-extrabold h-[50px] rounded-[12px] mt-2 hover:brightness-95 transition border-none outline-none"
+                className="bg-[#F25E9C] text-[#FFFFFF] text-[20px] font-[Fredoka_One] font-extrabold h-[50px] rounded-[12px] mt-2 hover:brightness-95 transition border-none outline-none cursor-pointer"
               >
                 Quero Ser Revendedor
               </button>
