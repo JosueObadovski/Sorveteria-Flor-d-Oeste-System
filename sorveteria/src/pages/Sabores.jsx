@@ -28,6 +28,14 @@ import creme from "../assets/imagens/Morena-Sabor-Creme.png"
 import leiteCondMor from "../assets/imagens/Morena-Sabor-Leite Condensado.png"
 import nataMor from "../assets/imagens/Morena-Sabor-Nata.png"
 
+// Imagens Potes 2L
+import poteFlocosChoc from "../assets/imagens/Pote-2L-Flocos-e-Chocolate.png"
+import poteFlocosLeiteCond from "../assets/imagens/Pote-2L-Flocos-e-Leite-Condensado.png"
+import poteLeiteCondChoc from "../assets/imagens/Pote-2L-Leite-Condensado-e-Chocolate.png"
+import poteMorangoChoc from "../assets/imagens/Pote-2L-Morango-e-Chocolate.png"
+import poteMorangoFlocos from "../assets/imagens/Pote-2L-Morango-e-Flocos.png"
+import poteMorangoLeiteCond from "../assets/imagens/Pote-2L-Morango-e-Leite-Condensado.png"
+
 const saboresFruta = [
   { nome: "Limão", imagem: limao, alt: "Picolé de limão" },
   { nome: "Abacaxi", imagem: abacaxi, alt: "Picolé de abacaxi" },
@@ -75,10 +83,43 @@ const saboresMoreninha = [
   },
 ]
 
+const saboresPote2L = [
+  {
+    nome: "Flocos & Chocolate",
+    imagem: poteFlocosChoc,
+    alt: "Pote 2L Flocos e Chocolate",
+  },
+  {
+    nome: "Flocos & Leite Condensado",
+    imagem: poteFlocosLeiteCond,
+    alt: "Pote 2L Flocos e Leite Condensado",
+  },
+  {
+    nome: "Leite Condensado & Chocolate",
+    imagem: poteLeiteCondChoc,
+    alt: "Pote 2L Leite Condensado e Chocolate",
+  },
+  {
+    nome: "Morango & Chocolate",
+    imagem: poteMorangoChoc,
+    alt: "Pote 2L Morango e Chocolate",
+  },
+  {
+    nome: "Morango & Flocos",
+    imagem: poteMorangoFlocos,
+    alt: "Pote 2L Morango e Flocos",
+  },
+  {
+    nome: "Morango & Leite Condensado",
+    imagem: poteMorangoLeiteCond,
+    alt: "Pote 2L Morango e Leite Condensado",
+  },
+]
+
 const Sabores = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-300 via-fuchsia-400 to-orange-300 pt-[160px] pb-20">
-      {/* Seção Frutas */}
+      {/* Frutas */}
       <div className="bg-[#FDF0EC] rounded-[20px] px-[80px] py-[50px] max-w-[1320px] mx-auto">
         <h2 className="text-[40px] text-[#FDF0EC] font-fredoka font-bold mb-10 -mt-[110px] ml-[-80px]">
           Sabores Picolés de Fruta
@@ -90,7 +131,7 @@ const Sabores = () => {
         </div>
       </div>
 
-      {/* Seção Leite */}
+      {/* Leite */}
       <div className="bg-[#FDF0EC] rounded-[20px] px-[80px] py-[50px] max-w-[1320px] mx-auto mt-[150px]">
         <h2 className="text-[40px] text-[#FDF0EC] font-fredoka font-bold mb-10 -mt-[110px] ml-[-80px]">
           Sabores Picolés de Leite
@@ -102,7 +143,7 @@ const Sabores = () => {
         </div>
       </div>
 
-      {/* Seção Moreninhas */}
+      {/* Moreninhas */}
       <div className="bg-[#FDF0EC] rounded-[20px] px-[80px] py-[50px] max-w-[1320px] mx-auto mt-[150px]">
         <h2 className="text-[40px] text-[#FDF0EC] font-fredoka font-bold mb-10 -mt-[110px] ml-[-80px]">
           Moreninhas
@@ -110,6 +151,18 @@ const Sabores = () => {
         <div className="grid grid-cols-4 gap-x-[80px] gap-y-[50px] justify-items-center">
           {saboresMoreninha.map((item) => (
             <SaborCard key={item.nome} {...item} />
+          ))}
+        </div>
+      </div>
+
+      {/* Potes 2L */}
+      <div className="bg-[#FDF0EC] rounded-[20px] px-[80px] py-[50px] max-w-[1320px] mx-auto mt-[150px] mb-[100px]">
+        <h2 className="text-[40px] text-[#FDF0EC] font-fredoka font-bold mb-10 -mt-[110px] ml-[-80px]">
+          Potes de 2L
+        </h2>
+        <div className="grid grid-cols-3 gap-x-[80px] gap-y-[50px] justify-items-center">
+          {saboresPote2L.map((item) => (
+            <SaborCard key={item.nome} {...item} large />
           ))}
         </div>
       </div>
