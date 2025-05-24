@@ -126,7 +126,7 @@ const Sabores = () => {
         </h2>
         <div className="grid grid-cols-4 gap-x-[80px] gap-y-[50px] justify-items-center">
           {saboresFruta.map((sabor) => (
-            <SaborCard key={sabor.nome} {...sabor} />
+            <SaborCard key= {sabor.nome} {...sabor} />
           ))}
         </div>
       </div>
