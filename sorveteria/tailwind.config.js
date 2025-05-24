@@ -4,7 +4,8 @@ export default {
     extend: {
       fontFamily: {
         bungee: ["Bungee", "cursive"],
-        fredoka: ['"Fredoka One"', "cursive"],
+        fredoka: ['"Fredoka"', "sans-serif"], // para parágrafos
+        fredokaOne: ['"Fredoka One"', "cursive"], // para títulos
       },
     },
   },

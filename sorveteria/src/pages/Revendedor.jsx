@@ -37,7 +37,7 @@ export default function Revendedor() {
           Como Funciona em 3 Passos
         </h2>
 
-        <div className="grid grid-cols-3 gap-[60px] text-center text-[#FDF0EC] font-fredoka">
+        <div className="grid grid-cols-3 gap-[60px] text-center text-[#FDF0EC] font-fredoka mb-20">
           <div>
             <img
               src={imagem1}
@@ -64,6 +64,78 @@ export default function Revendedor() {
             />
             <p className="text-[24px] font-bold">
               3 - Comece a Vender e Ganhar
+            </p>
+          </div>
+        </div>
+
+        {/* Formulário de Contato */}
+        <div className="flex justify-center items-center mt-24 mb-[185px]">
+          <div className="bg-[#FDF0EC] rounded-[12px] shadow-xl px-8 py-12 w-full max-w-[460px] text-center">
+            {/* Ícone Envelope grande */}
+            <div className="flex justify-center mb-6">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-[200px] h-[200px] text-[#921CA1]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={1.5}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+
+            <h3 className="text-[#921CA1] text-[40px] font-[Fredoka_One] font-bold leading-tight mb-2">
+              Quer se tornar um <br /> revendedor ?
+            </h3>
+            <p className="text-[#921CA1] text-[24px] font-[fredoka] mb-6 leading-snug">
+              Preencha seus dados e <br /> entraremos em contato rapidinho
+            </p>
+
+            <form className="flex flex-col gap-[15px] px-[70px] text-left">
+              {[
+                { label: "Nome:", type: "text", name: "nome" },
+                { label: "E-mail:", type: "email", name: "email" },
+                { label: "Telefone:", type: "text", name: "telefone" },
+                {
+                  label: "Cidade e Estado:",
+                  type: "text",
+                  name: "cidadeEstado",
+                },
+              ].map((field, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center h-[50px] bg-[#F2B9C9] border border-[#890034] rounded-[12px]"
+                >
+                  <label
+                    htmlFor={field.name}
+                    className="text-[#890034] font-fredoka text-[15px] pl-[15px] py-[15px] w-[130px]"
+                  >
+                    {field.label}
+                  </label>
+                  <input
+                    type={field.type}
+                    id={field.name}
+                    name={field.name}
+                    className="flex-1 h-full bg-transparent outline-none border-none text-[#890034] text-[15px] font-semibold pr-4"
+                  />
+                </div>
+              ))}
+
+              <button
+                type="submit"
+                className="bg-[#F25E9C] text-[#FFFFFF] text-[20px] font-[Fredoka_One] font-extrabold h-[50px] rounded-[12px] mt-2 hover:brightness-95 transition border-none outline-none"
+              >
+                Quero Ser Revendedor
+              </button>
+            </form>
+
+            <p className="text-[#921CA1] text-[18px] font-[fredoka] mt-6 capitalize">
+              Garantimos a segurança dos seus dados sem spam
             </p>
           </div>
         </div>
