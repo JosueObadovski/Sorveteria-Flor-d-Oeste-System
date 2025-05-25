@@ -13,6 +13,7 @@ import fundoPedidos from "../assets/imagens/fundo-de-pedidos.png"
 import logoWhatsapp from "../assets/imagens/logo-whatsapp-fundo-transparente-icone 1.png"
 import logoIfood from "../assets/imagens/Logo-Ifood.png"
 import setaPedido from "../assets/imagens/seta-pedido.png"
+import fundoMapa from "../assets/imagens/fundo-card-mapa.png"
 
 export default function Home() {
   return (
@@ -89,23 +90,18 @@ export default function Home() {
 
         {/* Seção de pedido */}
         <div className="mt-[75px] relative flex justify-center">
-          {/* Fundo do card */}
           <img
             src={fundoPedidos}
             alt="Fundo pedido"
             className="absolute inset-0 w-full h-full object-cover z-0 rounded-[12px]"
           />
-
-          {/* Mão com picolés (maior e no canto inferior direito) */}
           <img
             src={maoPicoles}
             alt="Mão com picolés"
             className="absolute bottom-[0px] right-[0px] w-[550px] z-10"
           />
 
-          {/* Container da seção */}
           <div className="relative z-10 w-full max-w-[1320px] h-[879px] flex items-center">
-            {/* Imagem do Copão – colada na esquerda */}
             <div className="flex-shrink-0">
               <img
                 src={produto5}
@@ -114,30 +110,25 @@ export default function Home() {
               />
             </div>
 
-            {/* Conteúdo - texto e botões mais centralizados */}
             <div className="ml-[-300px] flex flex-col items-center text-center justify-center flex-2 relative">
-              {/* Título */}
               <h3 className="text-[60px] text-[#F9669B] font-bold leading-tight mb-2">
                 Quer um Momento
                 <br />
                 Ainda mais doce ?
               </h3>
 
-              {/* Seta ajustada para alinhar com a interrogação */}
               <img
                 src={setaPedido}
                 alt="Seta indicando botão"
                 className="absolute w-[100px] top-[185px] right-[170px]"
               />
 
-              {/* Subtítulo */}
               <p className="text-[#F9669B] mb-6 text-[24px] font-medium leading-snug">
                 Peça agora pelo nosso Delivery Oficial
                 <br />
                 ou via WhatsApp!
               </p>
 
-              {/* Botões */}
               <div className="flex flex-col gap-[60px]">
                 <a
                   href="https://www.ifood.com.br/delivery/foz-do-iguacu-pr/sorveteria-flor-doeste-america/087509e5-1d2a-4b53-b62c-c7a3981fde82"
@@ -153,7 +144,6 @@ export default function Home() {
                     Peça Agora!
                   </span>
                 </a>
-
                 <a
                   href="https://wa.me/554599263068"
                   target="_blank"
@@ -164,7 +154,6 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Frase final */}
               <p className="text-[#F9669B] mt-10 text-[30px] font-bold leading-snug max-w-[520px]">
                 Escolha seu sabor favorito
                 <br />e receba a onde estiver
@@ -173,12 +162,50 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Próxima seção título */}
+        {/* Título da seção do mapa */}
         <div className="mt-[140px] flex justify-center">
           <div className="w-full h-[90px] bg-[#FDF0EC] rounded-[12px] flex items-center justify-center shadow-lg">
             <h2 className="text-[40px] text-[#890034] font-[Fredoka_One] uppercase">
               Venha Viver Essa Experiência Doce de Perto!
             </h2>
+          </div>
+        </div>
+
+        {/* Card do Mapa */}
+        <div className="mt-[75px] mb-[150px] relative flex justify-center">
+          <img
+            src={fundoMapa}
+            alt="Fundo do mapa"
+            className="absolute inset-0 w-full h-full object-cover z-0 rounded-[12px]"
+          />
+          <div className="relative z-10 w-full max-w-[1320px] h-[879px] px-8 py-16 flex flex-col items-center justify-start">
+            <h3 className="text-[64px] text-[#F9669B] font-[Fredoka_One] text-center mb-[25px] leading-tight">
+              Descubra onde a Doçura é real
+              <br />
+              Visite a nossa sorveteria!
+            </h3>
+
+            <div className="w-full h-[500px] rounded-[12px] overflow-hidden shadow-lg">
+              <iframe
+                title="Mapa Sorveteria"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.6894371642417!2d-54.594397623924295!3d-25.527528077500028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f691f52a01e597%3A0x50d360eceef7adb2!2sFlor%20d%60Oeste%20Sorvetes!5e0!3m2!1spt-BR!2sbr!4v1716599999999!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <a
+              href="https://www.google.com/maps/place/Flor+d%60Oeste+Sorvetes/@-25.5271348,-54.592222,17z/data=!4m6!3m5!1s0x94f691f52a01e597:0x50d360eceef7adb2!8m2!3d-25.5275278!4d-54.5922017!16s%2Fg%2F11v3j9fflx?entry=ttu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-[25px] bg-[#890034] text-[#FFFFFF] text-[30px] font-[Fredoka] px-[25px] py-[11px] rounded-[50px] shadow-lg"
+            >
+              Ver no Google Maps
+            </a>
           </div>
         </div>
       </div>

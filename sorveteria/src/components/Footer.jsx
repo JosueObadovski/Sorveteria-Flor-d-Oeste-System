@@ -44,7 +44,7 @@ export default function Footer() {
           </h3>
           <div className="flex flex-col gap-2 font-['Fredoka']">
             <span>(+55) 45 9926-3068</span>
-            <span>contato@exemplo.com</span>
+            <span>flordoestesorvetes@gmail.com</span>
           </div>
         </div>
 
@@ -55,7 +55,13 @@ export default function Footer() {
           </h3>
           <div className="flex gap-[30px]">
             <img src={facebook} alt="Facebook" className="w-10 h-10" />
-            <img src={instagram} alt="Instagram" className="w-10 h-10" />
+            <a
+              href="https://www.instagram.com/flordoestesorvetes/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={instagram} alt="Instagram" className="w-10 h-10" />
+            </a>
             <img src={tiktok} alt="TikTok" className="w-10 h-10" />
           </div>
         </div>
