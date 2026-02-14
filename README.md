@@ -1,76 +1,96 @@
-# 🍦 Sorveteria Flor d’Oeste - Website Oficial
+# 🍦 Flor d’Oeste Ice Cream — Official Website
 
-Bem-vindo ao repositório do website da **Sorveteria Flor d’Oeste** — uma vitrine digital feita com amor, sabor e React 💖.
+![React](https://img.shields.io/badge/React-18-blue)
+![Vite](https://img.shields.io/badge/Vite-Build-purple)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-Styling-38bdf8)
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black)
 
-## 🔗 Acesse online
-
-🌐 [https://flordoestesorvetes.vercel.app](https://flordoestesorvetes.vercel.app)
-
----
-
-## 📌 Sobre o Projeto
-
-Este site foi desenvolvido com o objetivo de apresentar os produtos da Sorveteria Flor d’Oeste, facilitar pedidos via delivery e mostrar nossa localização para visitas presenciais.
-
-### Funcionalidades:
-- Destaque dos produtos com imagens
-- Integração com iFood e WhatsApp
-- Exibição do mapa com endereço no Google Maps
-- Design responsivo e visual agradável
+Official website of **Flor d’Oeste Ice Cream**, developed to present products, enable customer engagement, and provide easy access to delivery services and location information.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## 🔗 Live Website
 
-- [React.js](https://reactjs.org/)
-- [Vite](https://vitejs.dev/) (para build e desenvolvimento rápido)
-- [Tailwind CSS](https://tailwindcss.com/) (para estilização)
-- [Vercel](https://vercel.com/) (deploy e hospedagem)
+🌐 https://flordoestesorvetes.vercel.app
 
 ---
 
-## 🚀 Como rodar localmente
+## 📌 Project Overview
 
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/seu-repo.git
+This website was designed and developed as a modern digital storefront for Flor d’Oeste Ice Cream.  
 
-# Entre na pasta
-cd seu-repo
+The objective is to:
 
-# Instale as dependências
+- Showcase products in an attractive and responsive layout  
+- Facilitate online ordering via delivery platforms  
+- Provide direct contact via WhatsApp  
+- Display the physical store location through Google Maps  
+- Deliver a clean and engaging user experience  
+
+---
+
+## ✨ Features
+
+- 📸 Product showcase with images  
+- 📦 Direct integration with iFood  
+- 💬 WhatsApp quick-contact button  
+- 📍 Embedded Google Maps location  
+- 📱 Fully responsive design (mobile-first)  
+- ⚡ Fast loading performance using Vite  
+
+---
+
+## 🛠️ Tech Stack
+
+- **React.js** — Frontend library  
+- **Vite** — Fast development and build tool  
+- **Tailwind CSS** — Utility-first CSS framework  
+- **Vercel** — Hosting and deployment platform  
+
+---
+
+## 🚀 Getting Started (Local Development)
+
+bash
+# Clone the repository
+git clone https://github.com/your-username/your-repository.git
+
+# Navigate into the project directory
+cd your-repository
+
+# Install dependencies
 npm install
 
-# Inicie o servidor local
+# Run development server
 npm run dev
-```
+Open:
 
-Abra [http://localhost:5173](http://localhost:5173) para visualizar no navegador.
+http://localhost:5173
+in your browser to view the project locally.
 
----
-
-## 📂 Estrutura de Pastas
-
-```
+📂 Project Structure
 src/
-├── assets/        → imagens e logos
-├── components/    → componentes reutilizáveis
-├── pages/         → páginas principais (ex: Home.jsx)
-└── App.jsx        → ponto de entrada do app
-```
+├── assets/         → Images, logos, and static assets
+├── components/     → Reusable UI components
+├── pages/          → Main application pages (e.g., Home.jsx)
+├── App.jsx         → Main application wrapper
+└── main.jsx        → Application entry point
+🌍 Deployment
+This project is deployed using Vercel.
 
----
+To deploy:
 
-## 📬 Contato
+Push changes to the main branch
 
-📧 flordoestesorvetes@gmail.com  
-📍 [Ver no Google Maps](https://www.google.com/maps/place/Flor+d%60Oeste+Sorvetes/)
+Vercel automatically builds and deploys
 
-Redes sociais:
-- [Instagram](https://www.instagram.com/flordoestesorvetes/)
+📬 Contact Information
+📧 Email: flordoestesorvetes@gmail.com
+📍 Location: Available on Google Maps
+📷 Instagram: https://www.instagram.com/flordoestesorvetes/
 
----
+🔐 License
+This project is the exclusive property of Flor d’Oeste Ice Cream.
 
-## ⚖️ Licença
-
-Este projeto é de uso exclusivo da Sorveteria Flor d’Oeste. Direitos reservados © 2025.
+All rights reserved © 2026.
+Unauthorized copying, modification, distribution, or commercial use of this project is strictly prohibited.
