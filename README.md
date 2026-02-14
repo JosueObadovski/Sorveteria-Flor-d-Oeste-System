@@ -68,12 +68,14 @@ Open http://localhost:5173 in your browser to view the project locally.
 
 ## 📂 Project Structure
 
+```
 src/
-├── assets/         → Images, logos, and static assets
-├── components/     → Reusable UI components
-├── pages/          → Main application pages (e.g., Home.jsx)
-├── App.jsx         → Main application wrapper
-└── main.jsx        → Application entry point
+├── assets/        → Images, logos, and static assets
+├── components/    → Reusable UI components
+├── pages/         → Main application pages (e.g., Home.jsx)
+├── App.jsx        → Main application wrapper
+└── main.jsx       → Application entry point
+```
 
 ---
 
